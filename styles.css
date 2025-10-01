@@ -276,6 +276,11 @@ nav ul li:hover{
     /* flex-wrap: nowrap; */
     /* overflow-x: auto; */
   }
+  #picture{
+    border-radius: 40% ;
+    height: 50%;
+    width: 80%;
+}
 
   /* .home-content,
   .home-img {
