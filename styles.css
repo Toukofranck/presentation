@@ -1064,4 +1064,277 @@ footer a:hover {
   }
   
   nav ul.active li {
-    animation: menuItemSlide 0.5s ease
+    animation: menuItemSlide 0.5s ease forwards;
+  }
+  
+  nav ul.active li:nth-child(1) { animation-delay: 0.1s; }
+  nav ul.active li:nth-child(2) { animation-delay: 0.2s; }
+  nav ul.active li:nth-child(3) { animation-delay: 0.3s; }
+  nav ul.active li:nth-child(4) { animation-delay: 0.4s; }
+  nav ul.active li:nth-child(5) { animation-delay: 0.5s; }
+  nav ul.active li:nth-child(6) { animation-delay: 0.6s; }
+  nav ul.active li:nth-child(7) { animation-delay: 0.7s; }
+  
+  @keyframes menuItemSlide {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  nav ul li a {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .home {
+    padding-top: 90px;
+  }
+  
+  .home-content h1 {
+    font-size: 2.25rem;
+  }
+  
+  .home-content .multiple {
+    font-size: 1.5rem;
+  }
+  
+  .home-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .home-img img {
+    max-width: 300px;
+  }
+  
+  /* Grid Mobile Adjustments */
+  .services-content,
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+  
+  #portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  #portfolio-container .services-box {
+    min-height: 220px;
+    padding: 1.5rem 1rem;
+  }
+  
+  #portfolio-container .services-box i {
+    font-size: 2.5rem;
+  }
+  
+  #portfolio-container .services-box h3 {
+    font-size: 1.1rem;
+  }
+  
+  #portfolio-container .services-box h2 {
+    font-size: 1rem;
+  }
+  
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .contact-info a {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - PETIT MOBILE
+   ========================================== */
+@media screen and (max-width: 480px) {
+  :root {
+    --font-size-base: 13px;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .home-content h1 {
+    font-size: 2rem;
+  }
+  
+  .home-content .multiple {
+    font-size: 1.3rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .social-media a {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+  
+  .home-img img {
+    max-width: 260px;
+  }
+  
+  /* Compétences optimisées */
+  #portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  #portfolio-container .services-box {
+    min-height: 200px;
+    padding: 1.2rem 0.8rem;
+  }
+  
+  #portfolio-container .services-box i {
+    font-size: 2.2rem;
+  }
+  
+  #portfolio-container .services-box h3 {
+    font-size: 1rem;
+  }
+  
+  #portfolio-container .services-box h2 {
+    font-size: 0.95rem;
+  }
+  
+  #portfolio-container .services-box .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .services-box {
+    padding: 1.5rem;
+  }
+  
+  .services-box i {
+    font-size: 2.5rem;
+  }
+  
+  .services-box h3 {
+    font-size: 1.3rem;
+  }
+  
+  .portfolio-box .box {
+    height: 200px;
+  }
+  
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .contact-info a {
+    padding: 1.2rem 0.8rem;
+  }
+  
+  .contact-info a img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contact-info h5 {
+    font-size: 1rem;
+  }
+  
+  .premier {
+    padding: 1.5rem 1rem;
+  }
+  
+  .premier i {
+    font-size: 2rem;
+  }
+  
+  .premier h1 {
+    font-size: 1.5rem;
+  }
+  
+  .premier h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - iPhone XR & Similaires (414px)
+   ========================================== */
+@media screen and (min-width: 375px) and (max-width: 414px) {
+  #portfolio-container .services-box {
+    min-height: 210px;
+    padding: 1.3rem 0.9rem;
+  }
+  
+  #portfolio-container .services-box h3 {
+    font-size: 1.05rem;
+  }
+  
+  #portfolio-container .services-box h2 {
+    font-size: 1rem;
+  }
+}
+
+/* ==========================================
+   ANIMATIONS SUPPLÉMENTAIRES
+   ========================================== */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animations on scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Loading Animation */
+.loading {
+  animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+}
